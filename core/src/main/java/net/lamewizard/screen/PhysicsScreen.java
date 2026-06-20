@@ -9,6 +9,7 @@ import java.util.function.Function;
 /**
  * Template for screens that manage objects in a physical world.
  * Screens that require physics processing should extend this class.
+ * Class is aware of the required sequence for rendering and physics simulation.
  */
 public abstract class PhysicsScreen implements Screen {
     private final Consumer<Float> physicsProcess;

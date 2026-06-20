@@ -1,4 +1,4 @@
-package net.lamewizard.common;
+package net.lamewizard.rendering;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
