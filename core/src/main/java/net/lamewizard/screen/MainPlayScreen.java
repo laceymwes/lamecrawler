@@ -1,15 +1,19 @@
 package net.lamewizard.screen;
 
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.utils.ScreenUtils;
+import com.badlogic.gdx.utils.viewport.Viewport;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
 
 public final class MainPlayScreen extends PhysicsScreen {
+    private final Viewport viewport;
 
-
-    public MainPlayScreen(Consumer<Float> physicsProcess) {
+    public MainPlayScreen(Consumer<Float> physicsProcess, Viewport viewport) {
         super(physicsProcess);
+        this.viewport = viewport;
     }
 
     @Override
@@ -24,7 +28,8 @@ public final class MainPlayScreen extends PhysicsScreen {
 
     @Override
     protected void draw() {
-
+        ScreenUtils.clear(Color.BLACK);
+        viewport.apply();
     }
 
     @Override
