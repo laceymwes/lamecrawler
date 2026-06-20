@@ -3,9 +3,9 @@ package net.lamewizard.rendering;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 /**
- * Factor for common rendering related objects.
+ * Utility class for rendering-related functions and objects.
  */
-public final class RenderingFactory {
+public final class Rendering {
 
     private static final SpriteBatch batch = new SpriteBatch();
 
