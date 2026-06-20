@@ -1,7 +1,6 @@
 package net.lamewizard;
 
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.physics.box2d.World;
@@ -47,7 +46,11 @@ public final class Controller extends Game {
         world = Physics.world();
         engine = Physics.engine();
         var menuScreen = this.getScreen();
-        this.setScreen(new MainPlayScreen((frameDelta) -> engine.apply(world, frameDelta), viewport));
+        this.setScreen(new MainPlayScreen(
+                (frameDelta) -> engine.apply(world, frameDelta),
+                (bodyDef) -> world.createBody(bodyDef)
+            )
+        );
         menuScreen.dispose();
     }
 
@@ -58,6 +61,7 @@ public final class Controller extends Game {
         if (this.getScreen() != null) {
             this.getScreen().dispose();
         }
+
     }
 
 }
