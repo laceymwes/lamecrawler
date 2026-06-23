@@ -39,8 +39,8 @@ public final class MainMenuScreen implements Screen {
     @Override
     public void render(float delta) {
         ScreenUtils.clear(Color.BLACK);
-
         viewport.apply();
+
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
         font.setColor(Color.WHITE);
@@ -48,7 +48,7 @@ public final class MainMenuScreen implements Screen {
         final float x = viewport.getWorldWidth() / 2;
         final float y = viewport.getWorldHeight() / 2;
         font.draw(batch, "Lame Crawler", x - 1, y);
-        font.draw(batch, "Press any key to start", x - 1, y - 0.25f);
+        font.draw(batch, "Press any key to start", x - 2.25f, y - 0.75f);
         batch.end();
 
         if (Gdx.input.isKeyPressed(Input.Keys.ANY_KEY)) {

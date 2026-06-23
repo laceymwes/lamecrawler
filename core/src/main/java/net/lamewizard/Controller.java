@@ -1,15 +1,20 @@
 package net.lamewizard;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import net.lamewizard.physics.Engine;
 import net.lamewizard.physics.Physics;
 import net.lamewizard.screen.MainMenuScreen;
-import net.lamewizard.screen.MainPlayScreen;
+import net.lamewizard.screen.TestScreen;
+
+import java.util.function.Consumer;
 
 /** {@link com.badlogic.gdx.ApplicationListener} implementation shared by all platforms. */
 public final class Controller extends Game {
@@ -20,13 +25,17 @@ public final class Controller extends Game {
     private SpriteBatch batch;
     private BitmapFont font;
 
-    private final String debug = System.getProperty("debug");
+    private Box2DDebugRenderer debugRenderer;
 
     @Override
     public void create() {
-        viewport = new FitViewport(10, 8);
+        String debug = System.getenv("LAME_DEBUG");
+        if (debug != null) {
+            debugRenderer = new Box2DDebugRenderer();
+        }
+        viewport = new FitViewport(20, 20);
         batch = new SpriteBatch();
-        font = new BitmapFont();
+        initFont();
         font.setUseIntegerPositions(false);
         setScreen(new MainMenuScreen(
                 this::startGame,
@@ -35,6 +44,14 @@ public final class Controller extends Game {
                 font
             )
         );
+    }
+
+    private void initFont() {
+        var generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/Orbitron-VariableFont_wght.ttf"));
+        var parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.size = 12;
+        font = generator.generateFont(parameter);
+        generator.dispose();
     }
 
     @Override
@@ -46,12 +63,20 @@ public final class Controller extends Game {
         world = Physics.world();
         engine = Physics.engine();
         var menuScreen = this.getScreen();
-        this.setScreen(new MainPlayScreen(
-                (frameDelta) -> engine.apply(world, frameDelta),
+        Consumer<Float> processPhysics = (frameDelta) -> {
+            if (debugRenderer != null) {
+                debugRenderer.render(world, viewport.getCamera().combined);
+            }
+            engine.apply(world, frameDelta);
+        };
+        this.setScreen(new TestScreen(
+                processPhysics,
+                viewport,
                 (bodyDef) -> world.createBody(bodyDef)
             )
         );
         menuScreen.dispose();
+
     }
 
     @Override
@@ -61,7 +86,6 @@ public final class Controller extends Game {
         if (this.getScreen() != null) {
             this.getScreen().dispose();
         }
-
     }
 
 }

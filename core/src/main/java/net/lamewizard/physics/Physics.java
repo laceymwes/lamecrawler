@@ -8,6 +8,7 @@ import com.badlogic.gdx.physics.box2d.World;
  */
 public final class Physics {
 
+
     public enum FloatingValues {
         TIME_STEP {
             @Override
@@ -63,6 +64,7 @@ public final class Physics {
 
     private static final class LameEngine implements Engine {
         private float physicsAccumulator = 0f;
+
         /*
          This was taken from a few examples in the libgdx doco and Glen Fielder.
          https://gafferongames.com/post/fix_your_timestep/
