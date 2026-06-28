@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-public final class TestScreen extends PhysicsScreen {
+public final class PhysicsTestScreen extends PhysicsScreen {
     private final Viewport viewport;
     private final Function<BodyDef, Body> bodyFactory;
     Body circleBody;
@@ -18,7 +18,7 @@ public final class TestScreen extends PhysicsScreen {
     float kinematicAccumulator = 0f;
 
 
-    public TestScreen(Consumer<Float> physicsProcess, Viewport viewport, Function<BodyDef, Body> bodyFactory) {
+    public PhysicsTestScreen(Consumer<Float> physicsProcess, Viewport viewport, Function<BodyDef, Body> bodyFactory) {
         super(physicsProcess);
         this.viewport = viewport;
         this.bodyFactory = bodyFactory;
