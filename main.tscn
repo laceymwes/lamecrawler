@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d2bs3k3vxv0rd"]
+
+[node name="Main" type="Node" unique_id=497548141]
+
+[node name="World" type="Node2D" parent="." unique_id=2124846209]
+
+[node name="GUI" type="Control" parent="." unique_id=1886810417]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
