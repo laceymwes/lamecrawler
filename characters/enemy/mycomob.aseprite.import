@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://baqvdq1mxrkb"
+path="res://.godot/imported/mycomob.aseprite-e97f80c97b317ca4402cd29b5892a078.res"
+
+[deps]
+
+source_file="res://characters/enemy/mycomob.aseprite"
+dest_files=["res://.godot/imported/mycomob.aseprite-e97f80c97b317ca4402cd29b5892a078.res"]
+
+[params]
+

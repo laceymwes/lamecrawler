@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bp3tg3t4gmggv"
+path="res://.godot/imported/skeleton_01.aseprite-6845bf01b30a76ae17514c538cd5a4c1.res"
+
+[deps]
+
+source_file="res://characters/enemy/skeleton_01.aseprite"
+dest_files=["res://.godot/imported/skeleton_01.aseprite-6845bf01b30a76ae17514c538cd5a4c1.res"]
+
+[params]
+

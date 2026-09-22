@@ -7,5 +7,7 @@
 [node name="GUI" type="Control" parent="." unique_id=1886810417]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -18.0
+offset_top = -19.0
+offset_right = 22.0
+offset_bottom = 21.0

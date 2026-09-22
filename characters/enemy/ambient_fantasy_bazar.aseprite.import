@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d101v3rkds50l"
+path="res://.godot/imported/ambient_fantasy_bazar.aseprite-67964fb5cf2269d68e6d6755a6fc0c10.res"
+
+[deps]
+
+source_file="res://characters/enemy/ambient_fantasy_bazar.aseprite"
+dest_files=["res://.godot/imported/ambient_fantasy_bazar.aseprite-67964fb5cf2269d68e6d6755a6fc0c10.res"]
+
+[params]
+

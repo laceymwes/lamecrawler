@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://chcu80wn4cd2b"
+path="res://.godot/imported/wizard_light_blue.aseprite-29df0bed90f02c93d0d1e897aaf09c64.res"
+
+[deps]
+
+source_file="res://models/characters/wizard_light_blue.aseprite"
+dest_files=["res://.godot/imported/wizard_light_blue.aseprite-29df0bed90f02c93d0d1e897aaf09c64.res"]
+
+[params]
+

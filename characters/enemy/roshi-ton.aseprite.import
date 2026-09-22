@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://day4tr2x3qw10"
+path="res://.godot/imported/roshi-ton.aseprite-ddd0f40d6352a1b584406a5bafdcb29c.res"
+
+[deps]
+
+source_file="res://characters/enemy/roshi-ton.aseprite"
+dest_files=["res://.godot/imported/roshi-ton.aseprite-ddd0f40d6352a1b584406a5bafdcb29c.res"]
+
+[params]
+
