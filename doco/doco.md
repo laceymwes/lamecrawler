@@ -58,7 +58,7 @@ There are three different classes of resources:
     - Patrols with combat and non-combat NPCs.
     - Research can be conducted in DM chamber.
     - Researchable items can be discovered in the dungeon. 
-- Consults for each chamber for **major** progression progressions.
+- Consults for each chamber for even-level (2, 4, 6, etc.) progressions.
   - Consultations for chamber progression can have DM skill level requirements. i.e. barracks lvl 10 requires DM level 10 marshall skill (or similar).
   - Consultations take some tbd amount of time. Maybe this time can be effected with upgrades, etc.
   - 
