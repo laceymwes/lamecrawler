@@ -13,9 +13,10 @@ The goal of a DM is to generate resources that can be given as tribute to the DG
 All resources are sourced from the dungeon internals (non-visable).
 There are three different classes of resources:
 1. **Dungeon resources** that can only be consumed in the dungeon level
-  - Research materials 
+  - Research materials like artifacts
+  - Gear 
 2. **Tribute resources** that can only be used as tribute to the DG avatar
-  - Artifacts
+  - UNDEFINED: How do we represent this? Is it just numerical?
 3. **Transmutable Resources** are resources generated in the dungeon and can be converted to tribute
   - Gold
   - Manufacturing materials
