@@ -14,5 +14,5 @@ The level one design and equipment will be heavily inspired by the Hittites.
 - [Illuyanka, sea god](https://en.wikipedia.org/wiki/Illuyanka)
 - [Hittite necromancy](https://en.wikipedia.org/wiki/Hittite_mythology_and_religion#mwbA)
     - "This type of pit ritual is known as "necromantic",[11] because they were attempting to commune with gods of the Underworld and summon them into the living" 
-- [Hittite altars](https://www.hittitemonuments.com/
-= [Hittite artifacts](https://pbase.com/dosseman/hittite)s
+- [Hittite altars](https://www.hittitemonuments.com/)
+= [Hittite artifacts](https://pbase.com/dosseman/hittite)
